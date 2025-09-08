@@ -8,7 +8,7 @@ if not TOKEN:
     raise RuntimeError("❌ DISCORD_BOT_TOKEN environment variable not set!")
 
 # Test guilds (replace with yours)
-TEST_GUILDS = [1373066824278605874, 1399784437440319508]
+TEST_GUILDS = [1399784437440319508, 1399784437440319508]
 
 intents = discord.Intents.default()
 intents.guilds = True
