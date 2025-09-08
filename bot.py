@@ -6,8 +6,14 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv()
+
 TOKEN = os.getenv("TOKEN")
-GUILD_ID = int(os.getenv("GUILD_ID"))
+GUILD_ID = os.getenv("GUILD_ID")
+
+if not TOKEN or not GUILD_ID:
+    raise ValueError("❌ TOKEN or GUILD_ID is missing in environment variables!")
+
+GUILD_ID = int(GUILD_ID)
 
 intents = discord.Intents.default()
 intents.guilds = True
